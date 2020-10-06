@@ -1,0 +1,22 @@
+{
+  "name": "gulp-project",
+  "version": "1.0.0",
+  "description": "build project",
+  "scripts": {
+    "pdf": "gulp pdf",
+    "clean": "gulp clean"
+  },
+  "author": "Himanshu Gautam",
+  "license": "ISC",
+  "devDependencies": {
+    "git-rev-sync": "^3.0.1",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-markdown-pdf": "^8.0.0",
+    "moment": "^2.29.0"
+  },
+  "resolutions": {
+    "graceful-fs": "^4.2.4"
+  }
+}
