@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-const clean = require('gulp-clean');
+const del = require('del');
 const concat = require('gulp-concat');
 const markdownPdf = require('gulp-markdown-pdf');
 const path = require('path');
@@ -22,10 +22,10 @@ gulp.task('pdf', function(done) {
         .pipe(gulp.dest('dist'));
     done();
 });
-gulp.task('clean', function(done){
-    gulp.src('./dist', {read: false})
-        .pipe(clean());
-    done();
-});
+gulp.task('clean', function () {
+    return del([
+      'dist/**/*',
+    ]);
+  });
 //gulp.task('default', ['pdf']);
 gulp.task('default', gulp.series('pdf'));
